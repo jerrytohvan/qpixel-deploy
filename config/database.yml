@@ -1,0 +1,37 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  collation: utf8mb4_unicode_ci
+  host: 127.0.0.1
+  port: 3306
+  # Change these credentials to match your own environment
+  username: <%= ENV['MYSQL_USER'] %>
+  password:  <%= ENV['MYSQL_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: qpixel_dev
+
+test:
+  <<: *default
+  database: qpixel_test
+
+production:
+  <<: *default
+  database: <%= ENV['MYSQL_DATABASE'] %>
+
+redis_default: &redis_default
+  host: 127.0.0.1
+  port: 6379
+  # Also supported: db, url, path, password. See https://github.com/redis/redis-rb for docs.
+
+redis_development:
+  <<: *redis_default
+
+redis_test:
+  <<: *redis_default
+
+redis_production:
+  # If you want to use a shared Redis server in prod (for load-balanced servers or whatever else),
+  # change this to those settings.
+  <<: *redis_default
