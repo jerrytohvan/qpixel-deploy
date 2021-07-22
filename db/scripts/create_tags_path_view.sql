@@ -10,8 +10,8 @@ create view tags_paths AS WITH RECURSIVE tag_path(id, created_at, updated_at, co
       wiki,
       excerpt,
       parent_id,
-      name,
-      name as path
+       `name`,
+      `name` as `path`
    FROM
       tags
    WHERE
@@ -28,7 +28,7 @@ create view tags_paths AS WITH RECURSIVE tag_path(id, created_at, updated_at, co
       t.excerpt,
       t.parent_id,
       t.name,
-      concat(tp.path, ' > ', t.name) as path
+      concat(tp.path, ' > ', t.name) as `path`
    FROM
       tag_path AS tp
       JOIN
@@ -40,4 +40,4 @@ SELECT
 FROM
    tag_path
 ORDER BY
-   path;
+   `path`;
