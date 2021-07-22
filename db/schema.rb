@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_07_12_144301) do
 
-  create_table "abilities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "abilities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci", force: :cascade do |t|
     t.bigint "community_id"
     t.string "name"
     t.text "description"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2021_07_12_144301) do
     t.index ["community_id"], name: "index_abilities_on_community_id"
   end
 
-  create_table "ability_queues", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "ability_queues", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci", force: :cascade do |t|
     t.bigint "community_user_id"
     t.text "comment"
     t.boolean "completed"
@@ -283,7 +283,7 @@ ActiveRecord::Schema.define(version: 2021_07_12_144301) do
     t.index ["post_id"], name: "index_pinned_links_on_post_id"
   end
 
-  create_table "post_flag_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "post_flag_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci", force: :cascade do |t|
     t.bigint "community_id"
     t.string "name"
     t.text "description"
@@ -545,7 +545,7 @@ ActiveRecord::Schema.define(version: 2021_07_12_144301) do
     t.index ["user_id"], name: "index_thread_followers_on_user_id"
   end
 
-  create_table "user_abilities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "user_abilities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci", force: :cascade do |t|
     t.bigint "community_user_id"
     t.bigint "ability_id"
     t.boolean "is_suspended", default: false
