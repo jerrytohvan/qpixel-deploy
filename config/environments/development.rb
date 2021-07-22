@@ -44,7 +44,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :ses
   config.action_mailer.default_url_options = { host: 'meta.codidact.com', protocol: 'https' }
 
-  config.active_storage.service = :local
+  config.active_storage.service = :s3
 
   # Ensure docker ip added to allowed, given that we are in container
   if File.file?('/.dockerenv') == true
