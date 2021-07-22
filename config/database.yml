@@ -21,9 +21,7 @@ production:
   database: <%= ENV['CLEARDB_DATABASE'] %>
 
 redis_default: &redis_default
-  host: <%= ENV['REDIS_HOST'] %>
-  port: <%= ENV['REDIS_PORT'] %>
-  password: <%= ENV['REDIS_PASSWORD'] %>
+  url: <%= ENV['REDIS_URL'] %>
   # Also supported: db, url, path, password. See https://github.com/redis/redis-rb for docs.
 
 redis_development:
