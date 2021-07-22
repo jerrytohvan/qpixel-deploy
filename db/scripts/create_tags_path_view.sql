@@ -1,4 +1,4 @@
-create view tags_paths AS WITH RECURSIVE tag_path(id, created_at, updated_at, community_id, tag_set_id, wiki_markdown, wiki, excerpt, parent_id, name, path) AS
+create view tags_paths AS WITH RECURSIVE tag_path(id, created_at, updated_at, community_id, tag_set_id, wiki_markdown, wiki, excerpt, parent_id, `name`, `path`) AS
 (
    SELECT
       id,
