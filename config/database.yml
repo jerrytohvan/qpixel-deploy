@@ -2,11 +2,11 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   collation: utf8mb4_general_ci
-  host: <%= ENV['CLEARDB_HOST'] %>
-  port: 3306
+  host: <%= ENV['JAWSDB_HOST'] %>
+  port: <%= ENV['JAWSDB_PORT'] %>
   # Change these credentials to match your own environment
-  username: <%= ENV['CLEARDB_USER'] %>
-  password: <%= ENV['CLEARDB_PASSWORD'] %>
+  username: <%= ENV['JAWSDB_USER'] %>
+  password: <%= ENV['JAWSDB_PASSWORD'] %>
 
 development:
   <<: *default
@@ -18,7 +18,7 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV['CLEARDB_DATABASE'] %>
+  database: <%= ENV['JAWSDB_DATABASE'] %>
 
 redis_default: &redis_default
   host: <%= ENV['REDIS_HOST'] %>
