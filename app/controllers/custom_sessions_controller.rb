@@ -1,5 +1,5 @@
 class CustomSessionsController < Devise::SessionsController
-  protect_from_forgery
+  protect_from_forgery except: [:create]
 
   @@first_factor = []
 
