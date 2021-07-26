@@ -18,8 +18,9 @@ gem 'tzinfo-data', '~> 1.2019.3'
 gem 'uglifier', '>= 1.3.0'
 
 # Sign in
-gem 'devise', '~> 4.7'
+gem 'devise', '~> 4.7.3'
 gem 'omniauth', '~> 1.9'
+
 
 # Markdown support in both directions.
 gem 'commonmarker', '~> 0.21'
@@ -69,6 +70,7 @@ gem 'rmagick'
 # EeeMAILS!
 gem 'premailer-rails', '~> 1.11'
 
+# Shim to load environment variables from .env into ENV in development.
 group :test do
   gem 'minitest', '~> 5.10.3'
   gem 'minitest-ci', '~> 3.4.0'
