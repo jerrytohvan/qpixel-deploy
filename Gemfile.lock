@@ -306,6 +306,7 @@ DEPENDENCIES
   awesome_print (~> 1.8)
   aws-sdk-s3 (~> 1.61)
   aws-ses-v4
+  bcrypt (~> 3.1.16)
   byebug (~> 11.1)
   chartkick (~> 3.4)
   coffee-rails (~> 4.2.2)

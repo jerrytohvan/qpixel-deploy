@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 # Sign in
 gem 'devise', '~> 4.7.3'
 gem 'omniauth', '~> 1.9'
+gem 'bcrypt', '~> 3.1.16'
 
 
 # Markdown support in both directions.
