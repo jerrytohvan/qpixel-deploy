@@ -9,7 +9,7 @@ class RequestContext
     end
 
     def redis
-      $redis ||= Redis.new(path: YAML.load_file(Rails.root.join('config', 'database.yml'))["redis_#{Rails.env}"], ssl_params: { verify_mode: OpenSSL::SSL::VERIFY_NONE })
+      $redis ||= Redis.new(YAML.load_file(Rails.root.join('config', 'database.yml'))["redis_#{Rails.env}"])
     rescue NoMethodError
       raise LoadError, "You don't appear to have any Redis config in config/database.yml"
     end

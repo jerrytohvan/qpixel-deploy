@@ -7,7 +7,7 @@ module Net
 
     def use_ssl=(flag)
       self.ca_file = Rails.root.join('lib/ca-bundle.crt').to_s
-      self.verify_mode = OpenSSL::SSL::VERIFY_PEER
+      self.verify_mode = OpenSSL::SSL::VERIFY_NONE
       self.original_use_ssl = flag
     end
   end
