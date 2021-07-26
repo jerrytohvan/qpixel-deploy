@@ -3,7 +3,7 @@ require 'net/http'
 # rubocop:disable Metrics/ClassLength
 class UsersController < ApplicationController
   include Devise::Controllers::Rememberable
-
+  skip_before_action :verify_authenticity_token
   before_action :authenticate_user!, only: [:edit_profile, :update_profile, :stack_redirect, :transfer_se_content,
                                             :qr_login_code, :me, :preferences, :set_preference]
   before_action :verify_moderator, only: [:mod, :destroy, :soft_delete, :role_toggle, :full_log,
