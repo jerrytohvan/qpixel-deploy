@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <%= render 'layouts/head' %>
+  <%= csrf_meta_tags %>
 </head>
 <body class="<%= Rails.env.development? ? 'development' : '' %>">
   <%= render 'layouts/header' %>
