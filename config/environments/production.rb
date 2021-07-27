@@ -79,7 +79,17 @@ Rails.application.configure do
 
   config.active_storage.service = :s3
 
-  config.action_mailer.delivery_method = :ses
+  # config.action_mailer.delivery_method = :ses
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              ENV['MAILGUN_SMTP_SERVER'],
+    port:                 ENV['MAILGUN_SMTP_PORT'],
+    domain:               ENV['MAILGUN_DOMAIN'],
+    user_name:            ENV['MAILGUN_SMTP_LOGIN'],
+    password:             ENV['MAILGUN_SMTP_PASSWORD'],
+    authentication:       'plain',
+    enable_starttls_auto: true
+  }
   config.action_mailer.default_url_options = { host: 'qpixel-heroku.herokuapp.com', protocol: 'https' }
-  config.action_mailer.asset_host = 'https://meta.codidact.com'
+  config.action_mailer.asset_host = 'https://qpixel-heroku.herokuapp.com'
 end
