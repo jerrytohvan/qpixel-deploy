@@ -81,5 +81,5 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :ses
   config.action_mailer.default_url_options = { host: 'qpixel-heroku.herokuapp.com', protocol: 'https' }
-  config.action_mailer.asset_host = 'https://cdn.jsdelivr.net/gh/jerrytohvan/qpixel-deploy/app/'
+  config.action_mailer.asset_host = 'https://meta.codidact.com'
 end
