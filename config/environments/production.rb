@@ -90,6 +90,6 @@ Rails.application.configure do
     authentication:       'plain',
     enable_starttls_auto: true
   }
-  config.action_mailer.default_url_options = { host: 'qpixel-heroku.herokuapp.com', protocol: 'https' }
+  config.action_mailer.default_url_options = { host: 'meta.codidact.com', protocol: 'https' }
   config.action_mailer.asset_host = 'https://qpixel-heroku.herokuapp.com'
 end
