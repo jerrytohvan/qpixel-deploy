@@ -4,6 +4,8 @@
   <i class="fas fa-info-circle"></i> Your sign-in information is the same on all
   <a href="https://codidact.com/">Codidact communities</a>.
 </div>
+<p><%= resource_name %></p>
+<p><%= session_path(resource_name) %></p>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-group">
